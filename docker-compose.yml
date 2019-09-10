@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+
+  db:
+    build: ./db
+    container_name: database
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: shopping
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      #command: mysql -u root -p root shopping < /tmp/instagram.sql
+  php:
+    build: .
+    container_name: web
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - "80:80"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: shopping
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
