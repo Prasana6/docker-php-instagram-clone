@@ -25,7 +25,7 @@
 <div class="index_wrapper">
 
   <div class="index_sign log_sign">
-    <a href="signup" class="pri_btn">Need an account?</a>
+    <a href="signup.php" class="pri_btn">Need an account?</a>
   </div>
 
   <div class="github">
@@ -63,7 +63,7 @@
       </form>
       <div class="forgot_psswrd">
         <a href="forgot_psswrd" class="a_pri hover" alt="Forgot your password" data-description="Forgot your password">Forgot password?</a>
-        <a href="login" class="a_pri" alt="Open in another page">Separate Page</a>
+        <a href="login.php" class="a_pri" alt="Open in another page">Separate Page</a>
       </div>
     </div>
   </div>
